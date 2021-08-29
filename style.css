@@ -1,17 +1,24 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  padding: 0;
+}
 
 body {
   margin: 0;
-  background-color: #222222;
-  color: #fff;
+  background-color: #8fddff;
+  color: rgb(15, 15, 15);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
   margin: auto;
-  max-width: 800px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,14 +58,107 @@ input[type='text'] {
   margin-left: 10px;
 }
 
-@media (max-width: 800px) {
+.meals {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-@media (max-width: 700px) {
+.meal {
+  border-radius: 5px;
+  padding: 30px;
+  margin: 20px;
+  max-width: 260px;
+  background-color: #ffffff6b;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+
+.meal:active {
+  transform: scale(0.98);
+}
+
+.meal h3 {
+  margin: 20px 0 0 0;
+}
+
+.meal img {
+  width: 100%;
+}
+
+.single-meal {
+  border-radius: 5px;
+  padding: 30px;
+  margin-top: 50px;
+  background-color: #ffffff6b;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-bottom: 100px;
+}
+
+.single-meal p {
+  text-align: left;
+  max-width: 600px;
+  margin: 80px auto;
+}
+
+.single-meal img {
+  margin: 20px 0 50px 0;
+}
+
+ul.ingredients {
+  list-style-type: none;
+  max-width: 90%;
+  width: 500px;
+  margin: 20px auto;
+}
+
+ul.ingredients li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .single-meal {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .single-meal img {
+    max-width: 70%;
+  }
+
+  .single-meal p {
+    max-width: 80%;
+  }
 }
 
 @media (max-width: 500px) {
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
   input[type='text'] {
     width: 100%;
+  }
+
+  .single-meal {
+    width: 100vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .single-meal img {
+    margin: auto;
+  }
+
+  .single-meal p {
+    width: 70%;
   }
 }
