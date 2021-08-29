@@ -62,7 +62,7 @@ function getSingleMeal(id){
             console.log(meal)
 
             for (i = 1; i <= 20; i++){
-                if (meal[`strIngredient${i}`] !== ''){
+                if (meal[`strIngredient${i}`] !== '' && meal[`strIngredient${i}`] !== null){
                     ingredients[i] = {
                         ingredient: meal[`strIngredient${i}`],
                         measurement: meal[`strMeasure${i}`]
